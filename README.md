@@ -9,7 +9,7 @@ Hay quien ha resuelto este problema mediante la utilización de funciones tipo i
 y devolviendo estos valores ha través de su return.
 
 Las funciones se encuentran divididas en "Alpha" o "Numeric", 
-dependiendo el tipo de dato que maneja la función principal, ya que me resultaba más visual.
+dependiendo del tipo de dato que maneja la función principal, ya que me resultaba más visual.
 
 - 12 oct 2023
 Actualmente funcionando sin problemas aunque antes quiero optimizar más mi Makefile antes de entregarlo.
