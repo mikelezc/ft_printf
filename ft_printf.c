@@ -6,7 +6,7 @@
 /*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 11:36:14 by mlezcano          #+#    #+#             */
-/*   Updated: 2023/10/12 12:10:12 by mlezcano         ###   ########.fr       */
+/*   Updated: 2023/10/14 12:16:32 by mlezcano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,3 +59,37 @@ int	ft_printf(const char *str, ...)
 	va_end(argmnts);
 	return (length);
 }
+
+/*
+int	main(void)
+{
+	int				a;
+	char			*pointer;
+	unsigned int	b;
+	unsigned int	c;
+	int				x;
+	char			*string;
+
+	a = ft_printf("Probando string: buenos días, probando función\n");
+	ft_printf("Cantidad de caracteres del string devuelto por return: %d\n", a);
+	ft_printf("Prueba de un char %c\n", 'M');
+
+	printf(" 1                   Prueba de un porcentaje %%%\n");
+	ft_printf(" 2             Prueba de un porcentaje %%%");
+	printf("\n");
+	ft_printf("Dirección puntero: %p\n", pointer);
+	printf("Dirección puntero con printf para comparar%p\n", pointer);
+	ft_printf("Prueba de impresión de enteros %d, %i\n", a, a);
+	b = 23456;
+	c = -23456;
+	ft_printf("Prueba de impresión de unsigned int: %u\n", b);
+	ft_printf("Prueba de impresión de unsigned int: %u\n", c);
+	x = 3488989;
+	ft_printf("Prueba de impresión de un hexadecimal: %x\n", x);
+	ft_printf("Prueba de impresión de un hexadecimal: %X\n", x);
+	ft_printf("Pos ya estaría!", x);
+	string = "cadena";
+	ft_printf("prueba cadena: %s", x);
+	//printf("prueba cadena: %s", x);
+	return (0);
+}*/

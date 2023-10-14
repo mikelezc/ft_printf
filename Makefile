@@ -6,7 +6,7 @@
 #    By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/11 07:56:02 by mlezcano          #+#    #+#              #
-#    Updated: 2023/10/12 09:55:26 by mlezcano         ###   ########.fr        #
+#    Updated: 2023/10/13 19:32:16 by mlezcano         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ CC			= gcc
 CFLAGS		= -Wall -Werror -Wextra
 LIB 		= ar rcs
 OBJ			= $(SRC:.c=.o)
-RM			= rm -f
+RM			= rm -rf
 
 #Sources
 
@@ -31,11 +31,11 @@ all:		$(NAME)
 
 $(NAME):	$(OBJ)
 			$(CC) -c $(CFLAGS) $(SRC)
-			ar rcs $(NAME) $(OBJ)
+			$(LIB) $(NAME) $(OBJ)
 
 
 clean:
-			@$(RM) -rf *.o
+			@$(RM) *.o
 
 fclean:		clean
 			@$(RM) -f $(NAME)
