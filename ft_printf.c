@@ -6,7 +6,7 @@
 /*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 11:36:14 by mlezcano          #+#    #+#             */
-/*   Updated: 2023/10/14 12:16:32 by mlezcano         ###   ########.fr       */
+/*   Updated: 2023/10/14 13:42:32 by mlezcano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,9 @@ void	ft_typearg(va_list argmnts, const char type, int *length)
 	else if (type == 'p')
 	{
 		ft_putstrl("0x", length);
-		ft_puthexal(va_arg(argmnts, unsigned long long),
-			"0123456789abcdef", length);
+		if (*length != -1)
+			ft_puthexal(va_arg(argmnts, unsigned long long),
+				"0123456789abcdef", length);
 	}
 }
 
@@ -55,6 +56,8 @@ int	ft_printf(const char *str, ...)
 		else
 			ft_putcharl(str[i], &length);
 		i++;
+		if (length < 0)
+			return (-1);
 	}
 	va_end(argmnts);
 	return (length);

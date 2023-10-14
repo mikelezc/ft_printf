@@ -6,7 +6,7 @@
 /*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 13:13:17 by mlezcano          #+#    #+#             */
-/*   Updated: 2023/10/12 10:57:03 by mlezcano         ###   ########.fr       */
+/*   Updated: 2023/10/14 13:36:46 by mlezcano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,14 @@
 
 void	ft_putnbrl(int nbr, int *length)
 {
+	if (*length == -1)
+		return ;
 	if (nbr == -2147483648)
 	{
-		write (1, "-2147483648", 11);
-		(*length) += 11;
+		if (write (1, "-2147483648", 11) == -1)
+			*length = -1;
+		else
+			(*length) += 11;
 		return ;
 	}
 	if (nbr < 0)
@@ -29,12 +33,15 @@ void	ft_putnbrl(int nbr, int *length)
 	{
 		if (nbr > 9)
 			ft_putnbrl(nbr / 10, length);
-		ft_putcharl(nbr % 10 + '0', length);
+		if (*length != -1)
+			ft_putcharl(nbr % 10 + '0', length);
 	}
 }
 
 void	ft_puthexal(unsigned long long nbr, char *base, int	*length)
 {
+	if (*length == -1)
+		return ;
 	if (nbr >= 16)
 	{
 		ft_puthexal(nbr / 16, base, length);
@@ -46,6 +53,8 @@ void	ft_puthexal(unsigned long long nbr, char *base, int	*length)
 
 void	ft_putunsl(unsigned int num, int *len)
 {
+	if (*len == -1)
+		return ;
 	if (num >= 10)
 	{
 		ft_putunsl(num / 10, len);
