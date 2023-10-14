@@ -12,7 +12,14 @@ Las funciones se encuentran divididas en "Alpha" o "Numeric",
 dependiendo del tipo de dato que maneja la función principal, ya que me resultaba más visual.
 
 - 11 oct 2023
-  Comienzo proyecto.
+  -Comienzo proyecto.
+
 - 12 oct 2023
-  Proyecto finalizado.
-  Actualmente funcionando sin problemas aunque quiero optimizar más mi Makefile antes de entregarlo.
+  -Proyecto finalizado.
+  -Actualmente funcionando sin problemas aunque quiero optimizar más mi Makefile antes de entregarlo.
+  -Da problemas con el manejo de errores (-1) cuando le paso el paco strict.
+
+-14 oct 2023
+  -Optimizado makefile.
+  -Corregido el manejo de errores de la función (-1) para que pase el paco strict.
+  -Ahora si que todo OK! Listo para entregar.
