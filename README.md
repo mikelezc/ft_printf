@@ -19,7 +19,7 @@ dependiendo del tipo de dato que maneja la función principal, ya que me resulta
   -Actualmente funcionando sin problemas aunque quiero optimizar más mi Makefile antes de entregarlo.
   -Da problemas con el manejo de errores (-1) cuando le paso el paco strict.
 
--14 oct 2023
+- 14 oct 2023
   -Optimizado makefile.
   -Corregido el manejo de errores de la función (-1) para que pase el paco strict.
   -Ahora si que todo OK! Listo para entregar.
